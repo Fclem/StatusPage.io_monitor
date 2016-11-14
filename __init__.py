@@ -1,5 +1,6 @@
 #!/usr/bin/python
 from infra_monitor import *
+import json
 
 __author__ = 'clement.fiere@helsinki.fi'
 __date__ = '14/11/2016'
@@ -63,6 +64,7 @@ class Component(object):
 		return str(self.raw)
 
 
+# noinspection PyTypeChecker
 class StatusPageIoInterface(ServiceInterfaceAbstract):
 	""" Interface between configured checks and StatusPage.io components """
 	COMPONENT_BASE_URL = 'components/%s.json'
